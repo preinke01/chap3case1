@@ -16,10 +16,13 @@
 /* Window and Body Styles */
 html {
   height: 100%;
+}
+body {
   margin-left: auto;
   margin-right: auto;
   max-width: 960px;
   min-width: 640px;
+  /*min-height: 100%;*/
   width: 95%;
 }
 header, ul, nav, li, a {
@@ -31,38 +34,32 @@ box-sizing: border-box;
 
 
 /* Row Styles */
-header.row {
+.row {
   clear: both;
 }
-header.row::after {
+.row::after {
   clear: both;
   content: "";
   display: table;
 }
-ul.row {
-  clear: both;
-}
-ul.row::after {
-clear: both;
-content: "";
-display: table;
-}
+
 
 /* Page Header Styles */
-body > header > img {
+header > img {
   display: block;
   width: 70%;
   float: left;
-  margin: 0%;
 }
 
-/* Horizontal Navigation List Styles */
-body > header > nav > ul > li {
-display: block;
-float: left;
-padding-left: 2%;
-padding-right: 2%;
-width: 30%;
+header nav {
+  float: left;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 30%;
+}
+header nav ul a {
+  display: block;
+  width: 100%;
 }
 body > header > nav > ul > li > a {
   display: block;
@@ -70,15 +67,11 @@ body > header > nav > ul > li > a {
   padding-left: 5%;
   width: 100%;
 }
-nav.horizontal > ul > li {
+/* Horizontal Navigation List Styles */
+.horizontal  ul  li {
   display: block;
   width: 12.5%;
   float: left;
-}
-nav.horizontal a {
-  display: block;
-  line-height: 1.5em;
-  text-align: center;
 }
 /* Topics Styles */
 ul#topics li {
@@ -86,15 +79,15 @@ ul#topics li {
   width: 20%;
   float: left;
   margin-left: 0%;
-  margin-right: 1.5%
+  margin-right: 1.5%;
 }
 ul#topics li:first-of-type {
-  margin-right: 7.75%;
+  margin-left: 7.75%;
 }
 ul#topics li:last-of-type {
   margin-right: 7.75%;
 }
-ul#topics li > img {
+ul#topics li  img {
   display: block;
   width: 50%;
   margin-left: auto;
@@ -128,7 +121,8 @@ ul#comments li img {
   display: block;
   width: 20%;
   float: left;
-  margin-bottom: 30px;
+margin-left: 5%;
+margin-right: 5%;
 }
 ul#comments p {
 float: left;
@@ -137,14 +131,4 @@ width: 70%;
 /* Footer Styles */
 footer {
   clear: both;
-}
-footer::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-footer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
